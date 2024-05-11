@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<script src="./js/jQ/jquery-1.11.1.min.js"></script>
+		<script src="./js/main.js"></script>
+		<link  href="./style.css" rel="stylesheet">
+	</head>
+	
+	<body>
+		<div class="main">
+			Топас <select name="select_type" id="select_type">
+				<option value="0">5</option>
+				<option value="1">8</option>
+				<option value="2">10&nbsp;&nbsp;</option>
+			</select><br/>
+			<b>Топас <span id="select_type_val">5</span></b>
+			<h4>Основные работы</h4>
+			<table class="main_works">
+			<tr>
+				<td><b>Вид работ</b></td>
+				<td><b>Стоимость</b><br />[ рубли ]</td>
+				<td><b>Кол-во</b><br />[ услуг, метров, штук ]</td>
+			</tr>
+			<tr>
+				<td><input type="checkbox" id="delivery">
+				<label for="delivery">Доставка (до 100 км)</label></td>
+				<td><span class="delivery for_price"></span></td>
+				<td><input name="delivery" type="text" size="2" maxlength="2"> ус.</td>
+			</tr>
+			<tr>
+				<td><input type="checkbox" id="trench">
+				<label for="trench">Котлован для УОСВ (ройка и обратная засыпка)</label></td>
+				<td><span class="trench for_price"></span></td>
+				<td><input name="trench" type="text" size="2" maxlength="2"> ус.</td>
+			</tr>
+			<tr>
+				<td><input type="checkbox" id="installation">
+				<label for="installation">Монтаж УОСВ в котлован и пусконаладочные работы</label></td>
+				<td><span class="installation for_price"></span></td>
+				<td><input name="installation" type="text" size="2" maxlength="2"> ус.</td>
+			</tr>
+			<tr>
+				<td><input type="checkbox" id="pipeline">
+				<label for="pipeline">Трубопровод от фундамента до станции и д/колодца</label></td>
+				<td><span class="pipeline for_price"></span></td>
+				<td><input name="pipeline" type="text" size="2" maxlength="2" class="binded_fields_01 pipeline"> м.</td>
+			</tr>
+			<tr>
+				<td><input type="checkbox" id="drain_well_digging">
+				<label for="drain_well_digging">Дренажный колодец (ройка и обратная засыпка)</label></td>
+				<td><span class="drain_well_digging for_price"></span></td>
+				<td><input name="drain_well_digging" type="text" size="2" maxlength="2"> ус.</td>
+			</tr>
+			<tr>
+				<td><input type="checkbox" id="laying_electrical_cables">
+				<label for="laying_electrical_cables">Укладка электрокабеля</label></td>
+				<td><span class="laying_electrical_cables for_price"></span></td>
+				<td><input name="laying_electrical_cables" type="text" size="2" maxlength="2" class="binded_fields_01 laying_electrical_cables"> м.</td>
+			</tr>
+			<tr>
+				<td><input type="checkbox" id="formwork">
+				<label for="formwork">Опалубка</label></td>
+				<td><span class="formwork for_price"></span></td>
+				<td><input name="formwork" type="text" size="2" maxlength="2"> шт.</td>
+			</tr>
+			</table>
+			<b>Стоимость монтажных работ:</b> <span id="installation_cost">&nbsp;</span><br />
+			
+			<h4>Дополнительное оборудование</h4>
+			<table class="add_eq">
+			<tr>
+				<td><b>Оборудование</b></td>
+				<td><b>Стоимость</b><br />[ рубли ]</td>
+				<td><b>Кол-во</b><br />[ штук, м. кв. ]</td>
+			</tr>
+			<tr>
+				<td><input type="checkbox" id="alarm">
+				<label for="alarm">Сигнализация</label></td>
+				<td><span class="alarm for_price"></span></td>
+				<td><input name="alarm" type="text" size="2" maxlength="2"> шт.</td>
+			</tr>
+			<tr>
+				<td><input type="checkbox" id="drain_well">
+				<label for="drain_well">Дренажный колодец</label></td>
+				<td><span class="drain_well for_price"></span></td>
+				<td><input name="drain_well" type="text" size="2" maxlength="2"> шт.</td>
+			</tr>
+			<tr>
+				<td><input type="checkbox" id="luke_poli">
+				<label for="luke_poli">Люк полимеропесчаный</label></td>
+				<td><span class="luke_poli for_price"></span></td>
+				<td><input name="luke_poli" type="text" size="2" maxlength="2"> шт.</td>
+			</tr>
+			<tr>
+				<td><input type="checkbox" id="drain_pump_willo">
+				<label for="drain_pump_willo">Насос дренажный Willo</label></td>
+				<td><span class="drain_pump_willo for_price"></span></td>
+				<td><input name="drain_pump_willo" type="text" size="2" maxlength="2"> шт.</td>
+			</tr>
+			<tr>
+				<td><input type="checkbox" id="geotextile">
+				<label for="geotextile">Геотекстиль</label></td>
+				<td><span class="geotextile for_price"></span></td>
+				<td><input name="geotextile" type="text" size="2" maxlength="2"> м. кв.</td>
+			</tr>
+			</table>
+			<b>Стоимость дополнительного оборудования:</b> <span id="add_cost">&nbsp;</span><br /><br />
+			<b>Общая стоимость:</b> <span id="total_cost"></span>
+		</div>
+	</body>
+</html>

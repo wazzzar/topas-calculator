@@ -1,0 +1,28 @@
+body{
+	margin:0;
+	font-family:Arial;
+	font-size: 14px;
+}
+.main{
+	width:50em;
+	background:#eee;
+	padding:0.5em;
+}
+table{
+	background:#ccc;
+}
+table td{
+	background:#eee;
+}
+.main_works tr td:nth-child(2), .add_eq tr td:nth-child(2){
+	text-align:right;
+}
+input[type=text]{
+	border:1px solid #ccc;
+}
+input[disabled=disabled]{
+	background:#eee;
+}
+h4{
+	text-align:center;
+}
